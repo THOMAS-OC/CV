@@ -203,3 +203,235 @@ body {
     }
 
 }
+
+/* START Section Accueil */
+
+.accueil {
+    background: url("ressources/accueil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+    min-height: 900px;
+    width: calc(100% - 300px);
+    margin-left: auto;
+    position: relative;
+}
+
+h1{
+    font-size: 90px;
+    font-family: 'Merriweather', serif;
+    margin: 0 60px;
+    padding-top: 210px;
+}
+
+.txt-animation {
+    font-size: 30px;
+    margin: 10px 0 10px 60px;
+}
+
+.btn-acc {
+    display: inline-flex;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    background-color: black;
+    color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 2px;
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.btn-acc1 {
+    margin: 10px 0 0 60px;
+}
+
+.btn-acc2 {
+    background-color: transparent;
+    border: 2px solid black;
+    margin: 10px 0 0 60px;
+    color: black;
+    font-weight: 700;
+}
+
+.medias {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.media {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #333;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.media2 {
+    background-color: transparent;
+    border: 2px solid #333;
+}
+
+.icone-medias {
+    width: 30px;
+}
+
+.btn-rond{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #333;
+    animation-name: pulse;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 0 0 #333;
+}
+
+@keyframes pulse {
+    to {
+        
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.01);
+    }
+}
+
+.logo-btn-rond-acc {
+    width: 35px;
+}
+
+@media screen and (max-width:1300px){
+    .accueil{
+        height: 100vh;
+        width: 100%;
+        min-height: 900px;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .accueil{
+        height: 700px;
+        width: 100%;
+        min-height: 900px;
+        background-position: center;
+    }
+    h1{
+        font-size: 70px;
+        padding-top: 100px;
+        margin: 0 30px 0 30px;
+    }
+    .accueil p {
+        margin: 20px 0 20px 30px;
+    }
+    .btn-acc1{
+        margin: 10px 0 0 30px;
+    }
+    .media {
+        margin-left: 30px;
+    }
+    .btn-rond{
+        display: none;
+    }
+}
+
+@media screen and (max-width:700px){
+    .accueil{
+        height: 600px;
+        width: 100%;
+        min-height: 900px;
+        background-position: center;
+    }
+    h1{
+        font-size: 50px;
+        margin: 0 30px;
+    }
+    .accueil p {
+        font-size: 20px;
+    }
+    .btn-rond-menu{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .accueil{
+        height: 600px;
+        width: 100%;
+        min-height: 900px;
+        background-position: center;
+    }
+    h1{
+        font-size: 35px;
+    }
+    .accueil p {
+        font-size: 16px;
+    }
+    .btn-acc {
+        width: 120px;
+        font-size: 13px;
+        height: 40px;
+        margin: 10px 0 0 5px;
+
+    }
+    .btn-acc1 {
+        margin: 10px 0 0 30px;
+    }
+    .btn-rond-menu{
+        width: 60px;
+        height: 60px;
+    }
+    .media {
+        width: 40px;
+        height: 40px;
+    }
+    .icone-medias {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width:450px){
+
+    .accueil{
+        height: 500px
+    }
+
+    .btn-rond-menu{
+        width: 50px;
+        height: 50px;
+    }
+
+    .cont-line{
+        width: 20px;
+        height: 38px;
+    }
+
+}
+
+@media screen and (max-width:380px){
+
+    .txt-animation{
+        font-size: 15px;
+    }
+
+}
+
+
+
+/* END Section Accueil */
