@@ -24,6 +24,7 @@ body {
     top: 0;
     left: 0;
     border-right: 1px dashed #f1f1f1;
+    transition: all 0.2s ease-in-out;
 }
 
 .bloc-menu {
@@ -109,6 +110,23 @@ body {
 @media screen and (max-width: 1300px) {
     
     .nav-left {
+        left: -300px !important;
+        width: 250px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-visible {
+        left: 0px !important;
+    }
+
+    .bloc-menu:nth-child(1) {
+        display: none;
+    }
+    .bloc-menu:nth-child(7) {
         display: none;
     }
 

@@ -6,5 +6,17 @@ const ligne = document.querySelector(".cont-line")
 btnMenu.addEventListener("click", () => {
  
     ligne.classList.toggle("active")
+    nav.classList.toggle("menu-visible")
 
 })
+
+if (window.matchMedia('()max-width : 1300px')) {
+    
+    allItemNav.forEach(item => {
+        item.addEventListener("click", () => {
+            ligne.classList.toggle("active")
+            nav.classList.toggle("menu-visible")
+        })
+
+    })
+}
