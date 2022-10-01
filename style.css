@@ -731,3 +731,150 @@ h1{
 }
 
 /* END Section portfolio */
+
+/* START Section SKILLS */
+
+.skills {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+    border-bottom: 1px dashed #333;
+    background-color: #485663;
+    background: linear-gradient(90deg, rgba(41,50,60,1) 0%, rgba(89,72,99,1) 100%);
+    position: relative;
+    z-index: -1;
+    color: #f1f1f1;
+}
+
+.skill-cont {
+    position: relative;
+}
+
+.titre-skills {
+    font-size: 40px;
+    text-align: center;
+    margin: 80px 0 90px 0;
+    padding-left: 300px;
+}
+
+.grille-skills {
+    display: grid;
+    grid-template: repeat(3, 80px) / repeat(2, 500px);
+    grid-gap: 50px;
+    padding-left: 300px;
+}
+
+.barre-skill {
+    height: 15px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(167,146,243);
+    animation-name: skill;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    transform-origin: left;
+}
+
+.barre-grise {
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    height: 15px;
+    bottom: 0;
+    width: 500px;
+    background: rgb(216,216,216)
+}
+
+.b1 {
+    width: 80%;
+
+}
+
+.b2 {
+    width: 80%;
+}
+
+.b3, .b4 {
+    width: 70%;
+}
+
+.b5 {
+    width: 60%;
+}
+
+.b6 {
+    width: 90%;
+}
+
+.label-skill {
+    font-size: 24px;
+}
+
+@keyframes skill {
+
+    from {
+        transform: scaleX(0%);
+    }
+    to {
+        transform: scaleX(100%);
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .grille-skills {
+        grid-template: repeat(3, 80px) / repeat(2, 450px);
+    }
+    .barre-grise {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .grille-skills {
+        padding-left: 0px;
+    }
+    .titre-skills {
+        padding-left: 0;
+    }
+
+    .grille-skills {
+        grid-template: repeat(6, 80px) / repeat(1, 600px);
+        padding-left: 0;
+    }
+    .barre-grise {
+        width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .barre-grise {
+        width: 400px
+    }
+
+    .grille-skills {
+        grid-template: repeat(6, 80px) / repeat(1, 400px);
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .barre-grise {
+        width: 300px
+    }
+
+    .grille-skills {
+        grid-template: repeat(6, 80px) / repeat(1, 300px);
+        padding-left: 0;
+    }
+}
+/* END Section SKILLS */
