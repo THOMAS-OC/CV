@@ -62,3 +62,46 @@ for (let i = 0; i < inputFields.length; i++) {
         }
     })
 }
+
+// ANIM GSAP de l'accueil
+
+const navbar = document.querySelector(".nav-left")
+const titre = document.querySelector("h1")
+const btn = document.querySelectorAll(".btn-acc")
+const btnMedias = document.querySelectorAll(".media")
+const btnRondAccueil = document.querySelector(".btn-rond")
+
+const timeline = gsap.timeline({paused : true})
+timeline
+.to(navbar, {left: '0px', duration : 0.5, ease: Power3.easeOut})
+.from(titre, {y: -50, opacity:0, duration:0.4, ease: Power3.easeOut})
+.staggerFrom(btn, 1, {opacity:0}, 0.2, '-=0.30')
+.staggerFrom(btnMedias, 1, {opacity:0}, 0.2, '-=0.75')
+.from(btnRondAccueil, {y: -50, opacity:0, duration:0.4, ease: Power3.easeOut}, '-=1')
+
+
+window.addEventListener("load", () => {
+    timeline.play()
+})
+
+// Animation scrollMagic presentation
+
+const presentationContainer = document.querySelector(".presentation")
+const titrePresentation = document.querySelector(".titre-pres")
+const softSkills = document.querySelector(".pres-droite")
+const textPresentation = document.querySelector(".pres-gauche")
+const timelinePresentation = new TimelineMax();
+
+timelinePresentation
+.from(titrePresentation, {y: -200, opacity:0, duration:0.6, ease: Power3.easeOut})
+.from(textPresentation, {x: -200, opacity:0, duration:0.6, ease: Power3.easeOut})
+.from(softSkills, {x: -200, opacity:0, duration:0.6, ease: Power3.easeOut})
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+    triggerElement: presentationContainer,
+    reverse : false
+})
+.setTween(timelinePresentation)
+.addIndicators()
+.addTo(controller)
