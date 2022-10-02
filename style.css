@@ -779,11 +779,6 @@ h1{
     left: 0;
     bottom: 0;
     background: rgb(167,146,243);
-    animation-name: skill;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    transform-origin: left;
 }
 
 .barre-grise {
@@ -822,16 +817,6 @@ h1{
     font-size: 24px;
 }
 
-@keyframes skill {
-
-    from {
-        transform: scaleX(0%);
-    }
-    to {
-        transform: scaleX(100%);
-    }
-
-}
 
 @media screen and (max-width: 1400px) {
     .grille-skills {

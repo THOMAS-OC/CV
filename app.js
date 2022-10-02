@@ -105,3 +105,43 @@ const scene = new ScrollMagic.Scene({
 .setTween(timelinePresentation)
 .addIndicators()
 .addTo(controller)
+
+// Animation Portfolio
+
+const portfolioContainer = document.querySelector(".portfolio")
+const titrePortfolio = document.querySelector(".titre-port")
+const itemPortfolio = document.querySelectorAll(".item")
+
+const timelinePortfolio = new TimelineMax();
+timelinePortfolio
+.from(titrePortfolio, {y: -50, opacity:0, duration:0.5, ease: Power3.easeOut})
+.staggerFrom(itemPortfolio, 1, {opacity:0}, 0.2, "-=0.5")
+
+const scene2 = new ScrollMagic.Scene({
+    triggerElement: portfolioContainer,
+    reverse : false
+})
+.setTween(timelinePortfolio)
+.addTo(controller)
+
+// Animation Skills
+
+const skillsContainer = document.querySelector(".skills")
+const titreSkills = document.querySelector(".titre-skills")
+const namesSkills = document.querySelectorAll(".label-skill")
+const pourcentSkills = document.querySelectorAll(".number-skill")
+const itemSkills = document.querySelectorAll(".skill-cont")
+
+const timelineSkills = new TimelineMax();
+timelineSkills
+.from(titreSkills, {y: -50, opacity:0, duration:0.5, ease: Power3.easeOut})
+.staggerFrom(namesSkills, 0.5, {opacity:0}, 0.2, "-=0.5")
+.staggerFrom(pourcentSkills, 0.5, {opacity:0}, 0.2, "-=0.5")
+.staggerFrom(itemSkills, 0.5, {opacity:0}, 0.2, "-=0.5")
+
+const scene3 = new ScrollMagic.Scene({
+    triggerElement: skillsContainer,
+    reverse : false
+})
+.setTween(timelineSkills)
+.addTo(controller)
