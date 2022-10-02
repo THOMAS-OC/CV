@@ -103,7 +103,6 @@ const scene = new ScrollMagic.Scene({
     reverse : false
 })
 .setTween(timelinePresentation)
-.addIndicators()
 .addTo(controller)
 
 // Animation Portfolio
